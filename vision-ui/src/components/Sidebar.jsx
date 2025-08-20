@@ -24,16 +24,16 @@ import LoginIcon from "@mui/icons-material/Login";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 
 const menuItems1 = [
-  { text: "Dashboard", icon: <DashboardIcon sx={{backgroundColor:"#0075ff"}}/> },
-  { text: "Tables", icon: <TableChartIcon sx={{color:"#0075ff"}} /> },
-  { text: "Billing", icon: <ReceiptIcon /> },
-  { text: "RTL", icon: <LanguageIcon /> },
+  { text: "Dashboard", icon: <DashboardIcon sx={{backgroundColor:"#0075ff" ,padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}}/> },
+  { text: "Tables", icon: <TableChartIcon  sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}}  /> },
+  { text: "Billing", icon: <ReceiptIcon   sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}}   />  },
+  { text: "RTL", icon: <LanguageIcon  sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}} /> },
 ];
 
 const menuItems2 = [
-  { text: "Profile", icon: <PersonIcon /> },
-  { text: "Sign In", icon: <LoginIcon /> },
-  { text: "Sign Up", icon: <AppRegistrationIcon /> },
+  { text: "Profile", icon: <PersonIcon  sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}}  /> },
+  { text: "Sign In", icon: <LoginIcon  sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}}  /> },
+  { text: "Sign Up", icon: <AppRegistrationIcon  sx={{backgroundColor:"#1A1F37",color:"#0075ff",padding:"4px",height:"30px",width:"30px",borderRadius:"12px"}} /> },
 ];
 
 export default function Sidebar() {
@@ -50,7 +50,7 @@ export default function Sidebar() {
         </Typography>
 
         {/* Menu Group 1 */}
-        <List>
+        <List sx={{width:"219px",height:"220px"}}>
           {menuItems1.map((item, index) => (
             <ListItemButton
               key={index}
@@ -70,7 +70,7 @@ export default function Sidebar() {
 
         <Typography
           variant="subtitle2"
-          sx={{ opacity: 0.6, mt: 2, mb: 1, fontSize: "0.75rem",color:"white"}}
+          sx={{  mt: 2, mb: 1, fontSize: "15px",color:"#FFFF"}}
         >
           ACCOUNT PAGES
         </Typography>
@@ -91,30 +91,32 @@ export default function Sidebar() {
             </ListItemButton>
           ))}
         </List>
-      </Box>
+      </Box  >
 
       {/* Bottom Card */}
+      <Box sx={{mt:"auto"}}>
+
       <Card
         sx={{
-          background: "linear-gradient(135deg, #1e3a8a, #3b82f6)",
-          color: "white",
           borderRadius: "12px",
           p: 1,
+          mb:2,
+          backgroundImage: "url('/bottom.png') "
         }}
-      >
-        <CardContent sx={{ textAlign: "center" }}>
-          <Typography variant="h6" fontWeight="bold">
+        >
+        <CardContent sx={{ textAlign: "center"}} >
+          <Typography variant="h6" fontWeight="bold" color="white">
             Need help?
           </Typography>
-          <Typography variant="body2" sx={{ mb: 1 }}>
+          <Typography variant="body2" sx={{ mb: 1,color:"white" }}>
             Please check our docs
           </Typography>
           <Button
             variant="contained"
             size="small"
             sx={{
-              background: "white",
-              color: "#1e3a8a",
+              background: "linear-gradient(135deg, rgba(6, 11, 40, 0.74), rgba(10, 14, 35, 0.71))",
+              color: "white",
               textTransform: "none",
               "&:hover": { background: "#f1f5f9" },
             }}
@@ -123,7 +125,25 @@ export default function Sidebar() {
           </Button>
         </CardContent>
       </Card>
-    </Box>
+            </Box>
+
+    {/* Bottom Button */}
+    <Button
+            variant="contained"
+            size="large"
+            sx={{ margin:"10px",marginTop:"20px",
+              background: "#0c98fe",
+              color: "white",
+              textTransform: "none",
+              "&:hover": { background: "#f1f5f9" },
+            }}
+            >
+            Upgrade  To PRO
+          </Button>
+            
+            </Box>
+    
+    
   );
 
   return (
@@ -146,18 +166,22 @@ export default function Sidebar() {
           width: 260,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 240,
+            width: 245,
+            height: "100vh",
             boxSizing: "border-box",
-            background: "linear-gradient(to bottom, #060B26F0 94%, #1A1F3700 0%)",
+            background: "linear-gradient(rgba(6, 11, 38, 0.94),rgba(26, 31, 55, 0))",
+            // backgroundColor:"#211e6b",
             color: "white",
             padding: "1rem",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
+             overflowY: "auto",
           },
         }}
       >
         {drawerContent}
+
       </Drawer>
     </>
   );
