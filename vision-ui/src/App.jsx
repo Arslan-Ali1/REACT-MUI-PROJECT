@@ -8,6 +8,7 @@ import Cards from './components/Cards'
 import Footer from './components/Footer'
 import Main from './components/Main'
 import Charts from './components/Charts'
+import Content from './components/Content'
 
 
 
@@ -21,7 +22,8 @@ function App() {
     <Cards/>
     <Main/>
     <Charts/>
-    <Footer/>
+     <Content/>
+        <Footer/>
   </>
   )
 }
