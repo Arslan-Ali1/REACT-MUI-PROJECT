@@ -21,13 +21,12 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 const projects = [
   {
     name: "Chakra Vision UI Version",
-    members: [   
-      { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" },
-      { name: "C",img: "/3.png" },
-      { name: "D",img: "/4.png" },
-      { name: "E",img: "/5.png" },
-     ],
+    members: [
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
+      { name: "C", img: "/3.png" },
+      { name: "E", img: "/5.png" },
+    ],
     budget: "$14,000",
     completion: 60,
     icon: <XdIcon sx={{ color: "#f24e1e" }} />,
@@ -35,8 +34,8 @@ const projects = [
   {
     name: "Add Progress Track",
     members: [
-      { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" },
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
     ],
     budget: "$3,000",
     completion: 10,
@@ -45,9 +44,9 @@ const projects = [
   {
     name: "Fix Platform Errors",
     members: [
-        { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" },
-      { name: "E",img: "/5.png" },
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
+      { name: "E", img: "/5.png" },
     ],
     budget: "Not set",
     completion: 100,
@@ -56,11 +55,10 @@ const projects = [
   {
     name: "Launch our Mobile App",
     members: [
-        { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" },
-      { name: "C",img: "/3.png" },
-      { name: "D",img: "/4.png" },
-      { name: "E",img: "/5.png" },
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
+      { name: "C", img: "/3.png" },
+      { name: "D", img: "/4.png" },
     ],
     budget: "$20,500",
     completion: 100,
@@ -68,8 +66,10 @@ const projects = [
   },
   {
     name: "Add the New Pricing Page",
-    members: [  { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" }],
+    members: [
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
+    ],
     budget: "$500",
     completion: 25,
     icon: <ShoppingCartIcon sx={{ color: "#1e90ff" }} />,
@@ -77,11 +77,10 @@ const projects = [
   {
     name: "Redesign New Online Shop",
     members: [
-        { name: "A",img: "/1.png" } ,
-      { name: "B",img: "/2.png" },
-      { name: "C",img: "/3.png" },
-      { name: "D",img: "/4.png" },
-      { name: "E",img: "/5.png" },
+      { name: "A", img: "/1.png" },
+      { name: "B", img: "/2.png" },
+      { name: "D", img: "/4.png" },
+      { name: "E", img: "/5.png" },
     ],
     budget: "$2,000",
     completion: 40,
@@ -134,28 +133,18 @@ export default function Content() {
     >
       <Grid container spacing={3}>
         {/* Projects Card */}
-        <Grid
-          item
-          xs={12}
-          md={8}
-          sx={{
-            flexBasis: { xs: "100%", md: "60%" },
-            maxWidth: { xs: "100%", md: "60%" },
-          }}
-        >
+        <Grid item xs={12} md={8}>
           <Card
             sx={{
               borderRadius: 3,
               bgcolor: "#05215d",
               boxShadow: "0px 4px 20px rgba(0,0,0,0.5)",
               p: 1,
+              height: "100%",
             }}
           >
             <CardContent>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", color: "white" }}
-              >
+              <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
                 Projects
               </Typography>
               <Typography variant="body2" sx={{ color: "limegreen", mb: 2 }}>
@@ -171,18 +160,10 @@ export default function Content() {
                   fontSize: 14,
                 }}
               >
-                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>
-                  COMPANIES
-                </Typography>
-                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>
-                  MEMBERS
-                </Typography>
-                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>
-                  BUDGET
-                </Typography>
-                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>
-                  COMPLETION
-                </Typography>
+                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>COMPANIES</Typography>
+                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>MEMBERS</Typography>
+                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>BUDGET</Typography>
+                <Typography sx={{ color: "rgba(160, 174, 192, 1)" }}>COMPLETION</Typography>
               </Box>
 
               {projects.map((proj, index) => (
@@ -192,27 +173,17 @@ export default function Content() {
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: { xs: "flex-start", md: "center" },
-                    // justifyContent: "space-between",
+                    justifyContent: "space-between",
                     mt: 2,
                     gap: 1,
+                    borderBottom: "1px solid rgba(255,255,255,0.1)",
+                    pb: 2,
+                    flexWrap: "wrap",
                   }}
                 >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-                      flex: 1,
-                    }}
-                  >
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 1, flex: 1, minWidth: 0, mt: 3 }}>
                     {proj.icon}
-                    <Typography
-                      sx={{
-                        color: "white",
-                        wordBreak: "break-word",
-                        flex: 1,
-                      }}
-                    >
+                    <Typography sx={{ color: "white", wordBreak: "break-word", flex: 1, minWidth: 0 }}>
                       {proj.name}
                     </Typography>
                   </Box>
@@ -221,17 +192,18 @@ export default function Content() {
                     max={4}
                     sx={{
                       justifyContent: { xs: "flex-start", md: "center" },
-                      mt: { xs: 1, md: 3 },
+                      mt: { xs: 1, md: 0 },
+                      "& .MuiAvatar-root": { marginRight: 1, border: "2px solid #05215d" },
                     }}
                   >
                     {proj.members.map((m, i) => (
-                      <Avatar key={i}>{m[0]}</Avatar>
+                      <Avatar key={i} src={m.img} alt={m.name} />
                     ))}
                   </AvatarGroup>
 
                   <Typography
                     sx={{
-                      width: { xs: "100%", md: 250 },
+                      width: { xs: "100%", md: 220 },
                       textAlign: { xs: "left", md: "center" },
                       color: "white",
                       mt: { xs: 1, md: 0 },
@@ -240,17 +212,8 @@ export default function Content() {
                     {proj.budget}
                   </Typography>
 
-                  <Box
-                    sx={{
-                      width: { xs: "100%", md: 120 },
-                      mt: { xs: 1, md: 0 },
-                    }}
-                  >
-                    <LinearProgress
-                      variant="determinate"
-                      value={proj.completion}
-                      sx={{ height: 6, borderRadius: 5 }}
-                    />
+                  <Box sx={{ width: { xs: "100%", md: 120 }, mt: { xs: 1, md: 0 } }}>
+                    <LinearProgress variant="determinate" value={proj.completion} sx={{ height: 6, borderRadius: 5 }} />
                   </Box>
                 </Box>
               ))}
@@ -259,29 +222,18 @@ export default function Content() {
         </Grid>
 
         {/* Orders Overview Card */}
-        <Grid
-          item
-          xs={12}
-          md={4}
-          sx={{
-            flexBasis: { xs: "100%", md: "38%" },
-            maxWidth: { xs: "100%", md: "40%" },
-          }}
-        >
+        <Grid item xs={12} md={4}>
           <Card
             sx={{
               borderRadius: 3,
-              bgcolor:  "#05215d",
+              bgcolor: "#05215d",
               boxShadow: "0px 4px 20px rgba(0,0,0,0.5)",
               p: 1,
               height: "100%",
             }}
           >
             <CardContent>
-              <Typography
-                variant="h6"
-                sx={{ fontWeight: "bold", color: "white" }}
-              >
+              <Typography variant="h6" sx={{ fontWeight: "bold", color: "white" }}>
                 Orders overview
               </Typography>
               <Typography variant="body2" sx={{ color: "limegreen", mb: 2 }}>
@@ -302,14 +254,9 @@ export default function Content() {
                 >
                   <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                     {order.icon}
-                    <Typography sx={{ color: "white" }}>
-                      {order.label}
-                    </Typography>
+                    <Typography sx={{ color: "white" }}>{order.label}</Typography>
                   </Box>
-                  <Typography
-                    variant="caption"
-                    sx={{ color: "#A0AEC0", mt: 0.5 }}
-                  >
+                  <Typography variant="caption" sx={{ color: "#A0AEC0", mt: 0.5 }}>
                     {order.date}
                   </Typography>
                 </Box>

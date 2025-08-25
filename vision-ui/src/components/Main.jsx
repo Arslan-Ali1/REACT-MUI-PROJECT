@@ -99,10 +99,12 @@ export default function Main() {
             <Box sx={{ position: "relative", display: "inline-flex", mx: "auto" }}>
               <CircularProgress
                 variant="determinate"
-                value={90}
+                value={80}
                 size={170}
                 thickness={5}
-                sx={{ color: "#1976d2" }}
+                sx={{ color: "#1976d2",
+                  
+                 }}
               />
               <Box
                 sx={{
