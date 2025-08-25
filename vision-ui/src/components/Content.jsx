@@ -21,42 +21,68 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 const projects = [
   {
     name: "Chakra Vision UI Version",
-    members: ["A", "B", "C"],
+    members: [   
+      { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" },
+      { name: "C",img: "/3.png" },
+      { name: "D",img: "/4.png" },
+      { name: "E",img: "/5.png" },
+     ],
     budget: "$14,000",
     completion: 60,
     icon: <XdIcon sx={{ color: "#f24e1e" }} />,
   },
   {
     name: "Add Progress Track",
-    members: ["D", "E"],
+    members: [
+      { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" },
+    ],
     budget: "$3,000",
     completion: 10,
     icon: <AddTaskIcon sx={{ color: "#377dff" }} />,
   },
   {
     name: "Fix Platform Errors",
-    members: ["F", "G"],
+    members: [
+        { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" },
+      { name: "E",img: "/5.png" },
+    ],
     budget: "Not set",
     completion: 100,
     icon: <BugReportIcon sx={{ color: "#ff4757" }} />,
   },
   {
     name: "Launch our Mobile App",
-    members: ["H", "I", "J"],
+    members: [
+        { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" },
+      { name: "C",img: "/3.png" },
+      { name: "D",img: "/4.png" },
+      { name: "E",img: "/5.png" },
+    ],
     budget: "$20,500",
     completion: 100,
     icon: <LaunchIcon sx={{ color: "#2ed573" }} />,
   },
   {
     name: "Add the New Pricing Page",
-    members: ["K"],
+    members: [  { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" }],
     budget: "$500",
     completion: 25,
     icon: <ShoppingCartIcon sx={{ color: "#1e90ff" }} />,
   },
   {
     name: "Redesign New Online Shop",
-    members: ["M", "N"],
+    members: [
+        { name: "A",img: "/1.png" } ,
+      { name: "B",img: "/2.png" },
+      { name: "C",img: "/3.png" },
+      { name: "D",img: "/4.png" },
+      { name: "E",img: "/5.png" },
+    ],
     budget: "$2,000",
     completion: 40,
     icon: <XdIcon sx={{ color: "#e84393" }} />,
@@ -122,12 +148,12 @@ export default function Content() {
               borderRadius: 3,
               bgcolor: "#05215d",
               boxShadow: "0px 4px 20px rgba(0,0,0,0.5)",
-              p: 2,
+              p: 1,
             }}
           >
             <CardContent>
               <Typography
-                variant="h6"
+                variant="h5"
                 sx={{ fontWeight: "bold", color: "white" }}
               >
                 Projects
@@ -166,7 +192,7 @@ export default function Content() {
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: { xs: "flex-start", md: "center" },
-                    justifyContent: "space-between",
+                    // justifyContent: "space-between",
                     mt: 2,
                     gap: 1,
                   }}
@@ -195,7 +221,7 @@ export default function Content() {
                     max={4}
                     sx={{
                       justifyContent: { xs: "flex-start", md: "center" },
-                      mt: { xs: 1, md: 0 },
+                      mt: { xs: 1, md: 3 },
                     }}
                   >
                     {proj.members.map((m, i) => (
@@ -205,7 +231,7 @@ export default function Content() {
 
                   <Typography
                     sx={{
-                      width: { xs: "100%", md: 100 },
+                      width: { xs: "100%", md: 250 },
                       textAlign: { xs: "left", md: "center" },
                       color: "white",
                       mt: { xs: 1, md: 0 },
@@ -247,7 +273,7 @@ export default function Content() {
               borderRadius: 3,
               bgcolor:  "#05215d",
               boxShadow: "0px 4px 20px rgba(0,0,0,0.5)",
-              p: 2,
+              p: 1,
               height: "100%",
             }}
           >
@@ -271,10 +297,10 @@ export default function Content() {
                     alignItems: "flex-start",
                     p: 1,
                     borderRadius: 2,
-                    mt: 2,
+                    mt: 3,
                   }}
                 >
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                     {order.icon}
                     <Typography sx={{ color: "white" }}>
                       {order.label}

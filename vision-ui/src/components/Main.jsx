@@ -63,11 +63,11 @@ export default function Main() {
               }}
             >
               <Typography
-                sx={{ ml: 0.5, fontSize: "0.85rem", color: "#718096" }}
+                sx={{  fontSize: "0.85rem", color: "#ffff",mt:13 }}
               >
                 Tap to record
               </Typography>
-              <ArrowRightAltIcon />
+              <ArrowRightAltIcon sx={{mt:13,color:"#ffff"}} />
             </IconButton>
           </Box>
         </Grid>
@@ -78,7 +78,8 @@ export default function Main() {
             sx={{
               p: 3,
               borderRadius: 4,
-              backgroundColor: "#051232",
+             background: "linear-gradient(to bottom, rgba(6, 11, 40, 0.94), rgba(10, 14, 35, 0.49))",
+
               color: "#fff",
               height: "344px",
               display: "flex",
@@ -115,21 +116,23 @@ export default function Main() {
                   justifyContent: "center"
                 }}
               >
-                <InsertEmoticonIcon sx={{ fontSize: 40, color: "#0075ff" }} />
+                <Box sx={{background:"rgba(0, 117, 255, 1)", borderRadius:"50%",width:"40px",height:"40px",display:"flex",justifyContent:"center",alignItems:"center"}}><InsertEmoticonIcon sx={{ fontSize: 40, color: "#ffff",width:"30px",height:"30px"}} />
+                </Box>
               </Box>
             </Box>
 
             <Box
               sx={{
                 p: 2,
-                borderRadius: 3,
+                borderRadius: 5,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                backgroundColor: "#081635"
+                 background: "linear-gradient(to bottom, rgba(6, 11, 40, 0.74), rgba(10, 14, 35, 0.71))",
+                 
               }}
             >
-              <Typography variant="body2">0%</Typography>
+              <Typography variant="body2"sx={{color:"rgba(160, 174, 192, 1)"}}>0%</Typography>
               <Box>
                 <Typography variant="h5" fontWeight="bold" color="white">
                   95%
@@ -138,7 +141,7 @@ export default function Main() {
                   Based on likes
                 </Typography>
               </Box>
-              <Typography variant="body2">100%</Typography>
+              <Typography variant="body2" sx={{color:"rgba(160, 174, 192, 1)"}}>100%</Typography>
             </Box>
           </Paper>
         </Grid>

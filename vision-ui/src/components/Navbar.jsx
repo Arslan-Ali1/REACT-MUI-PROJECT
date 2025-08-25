@@ -88,7 +88,7 @@ export default function Navbar() {
                 }}
               />
             </Box>
-
+         
             {/* Sign In */}
             <IconButton sx={{ color: "#718096", fontSize: "0.8rem" }}>
               <PersonIcon fontSize="small" />
@@ -98,6 +98,7 @@ export default function Navbar() {
                 Sign In
               </Typography>
             </IconButton>
+ <Box sx={{mr:"30px"}} >
 
             {/* Settings */}
             <IconButton sx={{ color: "#718096" }}>
@@ -108,6 +109,7 @@ export default function Navbar() {
             <IconButton sx={{ color: "#718096" }}>
               <NotificationIcon fontSize="small" />
             </IconButton>
+ </Box>
           </Box>
         </Toolbar>
       </AppBar>
